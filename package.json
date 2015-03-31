@@ -1,0 +1,9 @@
+{
+  "name": "Vnews",
+  "version": "0.0.1",
+  "description": "demo app",
+  "dependencies": [{
+    "express": "~4.12.3",
+    "jade": "~1.9.2"
+  }]
+}

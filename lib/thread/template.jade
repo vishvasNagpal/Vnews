@@ -1,0 +1,14 @@
+extend ../views/layout
+block content
+    div
+    - var items = results;
+        - each item, index in items
+            div.col-xs-12
+                if index == 0
+                    div.thumbnail
+                        h3(class='title text-center')= item.thread.title_full
+                        div(class="mtb-20 row text-center")
+                            - var url = item.thread.main_image ? item.thread.main_image : '/public/img/no-image.png'
+                            img(src= url, class='image-responsive thread-img')
+                div.text-container
+                    p.text-justify= item.text

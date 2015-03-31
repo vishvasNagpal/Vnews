@@ -1,0 +1,13 @@
+- var items = results;
+- var i = 3;
+    - each item in items
+        div.col-sm-6.col-md-4.col-xs-12.tile
+            div.thumbnail
+                - var url = item.thread.main_image ? item.thread.main_image : '/public/img/no-image.png'
+                img(src= url, class='image-responsive tile-img')
+                div.caption
+                    h4.text-center
+                        a(href='../thread/' + item.thread.title, class='thread')= item.thread.title
+                    p(class="text-justify")= item.text.substr(0,80) + "..."
+        div(style='display:none', id='next-url')= next
+
